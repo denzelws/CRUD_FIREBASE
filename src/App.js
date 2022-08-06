@@ -1,3 +1,4 @@
+
 import "./App.css";
 
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
@@ -14,7 +15,7 @@ import Post from "./pages/Post/Post";
 import Feed from './pages/Feed/Feed';
 
 // components
-import Navbar from "./components/Navbar";
+import NavBar from './components/NavBar'
 import Footer from "./components/Footer";
 import CreatePost from "./pages/CreatePost/CreatePost";
 import Search from "./pages/Search/Search";
@@ -24,7 +25,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import EditPost from "./pages/EditPost/EditPost";
 
 // context
-import { AuthProvider } from "./contexts/AuthContext";
+import {AuthProvider} from './context/AuthContext'
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -46,7 +47,7 @@ function App() {
     <div className="App">
       <AuthProvider value={{ user }}>
         <BrowserRouter>
-          <Navbar />
+          <NavBar />
           <div className="container">
             <Routes>
               <Route path="/" element={<Home />} />
