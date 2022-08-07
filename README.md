@@ -1,3 +1,38 @@
+<h1 align="center">CRUD utilizando Firebase</h1>
+
+## :rocket: Projeto 
+
+<p>Esse projeto foi desenvolvido com o objetivo de criar uma atmosfera de interação entre empresa e cliente, no qual o cliente além de ter acesso as informações do site também ao fazer o login interage com outras pessoas e expõe sua experiência por meio de posts.</p>
+<p>Foi utilizado Firebase como banco de dados, e utilização de hooks no React para autenticação, criação de post, update e exclusão do mesmo.</p>
+
+## 💻 Tecnologias
+
+Esse projeto foi desenvolvido com :
+<ul>
+  <li>React</li>
+  <li>Firebase</li>
+  <li>Tailwind CSS</li>
+ </ul>
+
+## :bulb: Tela
+
+
+
+https://user-images.githubusercontent.com/101350793/183310548-585a1faf-ddf8-455a-8bea-e237077923f9.mp4
+
+
+
+
+### `npm start`
+
+Executa o aplicativo no modo de desenvolvimento.\
+Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo em seu navegador.
+
+A página será recarregada quando você fizer alterações.\
+Você também pode ver erros no console.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
