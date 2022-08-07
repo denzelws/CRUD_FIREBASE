@@ -9,9 +9,11 @@ const NavBar = () => {
 
   return (
     <nav className='container mx-auto px-4 h-24 flex items-center'>
+      <NavLink to='/'>
       <span className='font-black cursor-pointer'>
         Logotrip
       </span>
+      </NavLink>
 
 
       <ul className='ml-auto flex gap-4'>
