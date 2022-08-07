@@ -43,7 +43,7 @@ const CreatePost = () => {
       title,
       image,
       body,
-      tags: tagsArray,
+      tagsArray,
       uid: user.uid,
       createdBy: user.displayName,
     });
@@ -54,7 +54,7 @@ const CreatePost = () => {
       title,
       image,
       body,
-      tags: tagsArray,
+      tagsArray,
       uid: user.uid,
       createdBy: user.displayName,
     });
