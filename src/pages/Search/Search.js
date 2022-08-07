@@ -13,9 +13,10 @@ const Search = () => {
   const { documents: posts } = useFetchDocuments("posts", search);
 
   return (
-    <div>
-      <h1>Resultados encontrados para: {search}</h1>
+    <div className="flex flex-col items-center text-center min-h-screen">
+      <h1 className="text-xl font-bold mb-3">Resultados encontrados para: {search}</h1>
       <div>
+      {posts && posts.map((post) => <PostDetail key={post.id} post={post} />)}
         {posts && posts.length === 0 && (
           <>
             <p>Não foram encontrados posts a partir da sua busca...</p>
@@ -24,7 +25,7 @@ const Search = () => {
             </Link>
           </>
         )}
-        {posts && posts.map((post) => <PostDetail key={post.id} post={post} />)}
+       
       </div>
     </div>
   );
