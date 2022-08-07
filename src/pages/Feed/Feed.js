@@ -25,7 +25,7 @@ const Feed = () => {
 
   console.log(loading);
   return (
-    <div className="flex flex-col items-center text-center">
+    <div className="flex flex-col items-center text-center min-h-screen">
       <h1 className='text-xl font-bold mb-5 '>Veja os nossos posts mais recentes</h1>
       <form onSubmit={handleSubmit}>
         <input
@@ -38,6 +38,7 @@ const Feed = () => {
       </form>
       <div>
         {loading && <p>Carregando...</p>}
+        {posts && posts.map((post) => <PostDetail key={post.id} post={post} />)}
         {posts && posts.length === 0 && (
           <div>
             <p>Não foram encontrados posts</p>
@@ -46,7 +47,6 @@ const Feed = () => {
             </Link>
           </div>
         )}
-        {posts && posts.map((post) => <PostDetail key={post.id} post={post} />)}
       </div>
     </div>
   );
