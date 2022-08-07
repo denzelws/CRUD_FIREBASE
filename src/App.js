@@ -12,7 +12,7 @@ import { useAuthentication } from "./hooks/useAuthentication";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Post from "./pages/Post/Post";
-import Feed from './pages/Feed/Feed';
+import Feed from './pages/Feed/Feed'
 
 // components
 import NavBar from './components/NavBar'
@@ -44,14 +44,15 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="overflow-hidden">
       <AuthProvider value={{ user }}>
         <BrowserRouter>
           <NavBar />
-          <div className="container">
+          <div>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
+              <Route path="/about" element={<About/>} />
+              <Route path="/posts/feed"element={<Feed />} />
               <Route
                 path="/posts/create"
                 element={user ? <CreatePost /> : <Navigate to="/login" />}
@@ -71,16 +72,12 @@ function App() {
                 element={!user ? <Register /> : <Navigate to="/" />}
               />
               <Route
-                path="/posts/feed"
-                element={user ? <Feed /> : <Navigate to="/login" />}
-              />
-              <Route
                 path="/dashboard"
                 element={user ? <Dashboard /> : <Navigate to="/login" />}
               />
             </Routes>
           </div>
-          <Footer />
+          <Footer/>
         </BrowserRouter>
       </AuthProvider>
     </div>
